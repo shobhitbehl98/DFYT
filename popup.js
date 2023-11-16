@@ -1,6 +1,10 @@
 let feed = document.getElementById('feed');
 let sidebar = document.getElementById('sidebar');
 let shorts = document.getElementById('shorts');
+let github = document.getElementById('github');
+github.addEventListener('click',()=>{
+    chrome.tabs.create({ url: "https://github.com/shobhitbehl98/Distraction-Free-YouTube" });
+})
 chrome.storage.sync.get(['feed'], function (result) {
     if (result.feed) {
         feed.checked = result.feed;

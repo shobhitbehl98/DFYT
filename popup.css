@@ -4,7 +4,7 @@
 }
 body{
     font-family: Calibri;
-    width: 14rem;
+    width: 15rem;
     height: fit-content;
     padding: 0.8rem;
     margin: 0;
@@ -37,4 +37,11 @@ body{
 }
 .black{
     background-color: black;
+}
+.heading{
+    justify-content: space-between;
+    display: flex;
+}
+#github{
+    cursor: pointer;
 }
