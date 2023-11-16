@@ -1,0 +1,40 @@
+#content{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    font-family: Calibri;
+    width: 14rem;
+    height: fit-content;
+    padding: 0.8rem;
+    margin: 0;
+    background-color: lightgoldenrodyellow;
+    font-size: larger;
+    
+}
+.action{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+}
+.switch{
+    margin-left: 1rem;
+}
+.h{
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom:1rem;
+}
+.button{
+    padding:0.2rem;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 1rem;
+    background-color: red;
+    color:white;
+    border: 1px solid black;
+}
+.black{
+    background-color: black;
+}
