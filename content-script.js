@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         console.log(m.classList);
     } else if (request.type === 'sidebar') {
         chrome.storage.sync.set({ 'sidebar': request.data }, function () { });
-        let m = document.querySelector('#secondary')
+        let m = document.querySelector('#related')
         if (request.data) {
             m.classList.add('hidden');
         } else {
@@ -19,6 +19,14 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }else if (request.type === 'shorts') {
         chrome.storage.sync.set({ 'shorts': request.data }, function () { });
         let m = document.querySelector(`[aria-label="Shorts"]`)
+        if (request.data) {
+            m.classList.add('hidden');
+        } else {
+            m.classList.remove('hidden');
+        }
+    }else if (request.type === 'comments') {
+        chrome.storage.sync.set({ 'comments': request.data }, function () { });
+        let m = document.querySelector(`#comments`)
         if (request.data) {
             m.classList.add('hidden');
         } else {
