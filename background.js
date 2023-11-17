@@ -2,7 +2,6 @@ chrome.runtime.onInstalled.addListener(function () {
     console.log('Extension installed');
 });
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    console.log(request,"bg");
     if (request.type === 'feed') {
         chrome.storage.sync.set({ 'feed': request.data }, function () {
 
